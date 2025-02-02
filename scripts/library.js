@@ -41,6 +41,8 @@ function createTableFromLibrary(library) {
   });
 
   // append the table to .main-content section
+  let existingChild = document.querySelector(".main-content > table");
+  document.querySelector(".main-content").innerHTML = "";
   document.querySelector(".main-content").appendChild(table);
 }
 
