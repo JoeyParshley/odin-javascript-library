@@ -5,31 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/library.css" />
     <script src="./scripts/library.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Joey's Library</title>
   </head>
   <body>
     <div class="container">
-      <div class="library">
-        <h1>My Personal</h1>
-        <table id="myTable">
-          <caption>
-            My Personal Library
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Title</th>
-              <th scope="col">Author</th>
-              <th scope="col">Number of Pages</th>
-              <th scope="col">Read</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-          <tfoot>
-            <th scope="row"></th>
-            <td></td>
-          </tfoot>
-        </table>
+      <header>
+        <span class="material-icons">library_books</span>
+        <span>My Personal Library</span>
+        <div class="buttons">
+          <button type="button" class="add">Add</button>
+          <button type="button" class="remove">Remove</button>
+          <button type="button" class="update">Update</button>
+        </div>
+      </header>
+      <div class="side-content">
+        <div class="logo">
+          <span class="material-icons">library_books</span>
+          <h1>Joey's Library</h1>
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="title">Views</li>
+            <li>
+              <span class="material-icons">table_view</span>
+              <span class="table_view">Table</span>
+            </li>
+            <li>
+              <span class="material-icons">grid_view</span><span>Cards</span>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="main-content"></div>
     </div>
+    <dialog>
+      <h4>Add Book to Library</h4>
+      <form id="myForm">
+        <fieldset>
+          <label for="name">Title</label>
+          <input type="text" id="title" placeholder="Name" />
+        </fieldset>
+        <fieldset>
+          <label for="author">Author</label>
+          <input type="text" id="author" placeholder="Author" />
+        </fieldset>
+        <fieldset>
+          <label for="numOfPages">Number of Pages</label>
+          <input type="text" id="numOfPages" placeholder="Number of Pages" />
+        </fieldset>
+        <fieldset>
+          <label for="hasBeenRead">Has Been Read</label>
+          <input type="text" id="hasBeenRead" placeholder="Has been Read" />
+        </fieldset>
+        <fieldset>
+          <button type="button" class="addBook">Add Book</button>
+        </fieldset>
+      </form>
+    </dialog>
   </body>
 </html>
