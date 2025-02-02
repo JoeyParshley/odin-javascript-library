@@ -1,3 +1,12 @@
+/**
+ * TODO:
+ *  - Add function to remove book by title when remove book button is clicked
+ *  - Add function to update book when update book button is pressed
+ *  - Create card view of books
+ *  - Add functin to switch views when table and card links are clicked
+ *  - add side bar to view book details when a book is clicked
+ */
+
 const myLibrary = [];
 const dialog = document.querySelector("dialog");
 const addButton = document.querySelector(".add");
